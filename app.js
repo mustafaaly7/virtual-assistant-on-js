@@ -80,7 +80,7 @@ const takeCommand = (message) => {
         window.open("https://google.com")
     } 
     else if (message.includes("what the fuck") || message.includes("fuck") || message.includes("wtf") || message.includes("lol") || message.includes("hahaha")) {
-        speak("Behave yourself nigga")
+        speak("Behave yourself ")
         window.open("https://gethelp.com")
     }else if (message.includes("open calculator") || message.includes("calculator")) {
         speak("opening calculator")
