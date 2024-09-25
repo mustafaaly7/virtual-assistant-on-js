@@ -37,3 +37,19 @@ wish()
 window.addEventListener("load" , ()=>{
     wish()
 })
+
+
+let speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+let recognition = new speechRecognition()
+recognition.onresult=((event)=>{
+    let currentIndex = event.resultIndex 
+    let transcript = event.results[currentIndex][0].transcript
+console.log(transcript);
+content.innerText = transcript
+})
+
+
+btn.addEventListener("click",()=>{
+    recognition.start()
+    
+})
