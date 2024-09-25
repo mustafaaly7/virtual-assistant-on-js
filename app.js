@@ -78,7 +78,10 @@ const takeCommand = (message) => {
     } else if (message.includes("open google") || message.includes("google")) {
         speak("opening google")
         window.open("https://google.com")
-    } else {
+    } else if (message.includes("open calculator") || message.includes("calculator")) {
+        speak("opening calculator")
+        window.open("calculator://")
+    }else {
         speak(`here's what i found related to ${message}`)
         window.open(`https://www.google.com/search?q=${message}` )
     }
