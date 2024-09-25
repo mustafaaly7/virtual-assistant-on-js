@@ -78,7 +78,11 @@ const takeCommand = (message) => {
     } else if (message.includes("open google") || message.includes("google")) {
         speak("opening google")
         window.open("https://google.com")
-    } else if (message.includes("open calculator") || message.includes("calculator")) {
+    } 
+    else if (message.includes("what the fuck") || message.includes("fuck") || message.includes("wtf") || message.includes("lol") || message.includes("hahaha")) {
+        speak("Behave yourself nigga")
+        window.open("https://gethelp.com")
+    }else if (message.includes("open calculator") || message.includes("calculator")) {
         speak("opening calculator")
         window.open("calculator://")
     }else {
