@@ -85,7 +85,19 @@ const takeCommand = (message) => {
     }else if (message.includes("open calculator") || message.includes("calculator")) {
         speak("opening calculator")
         window.open("calculator://")
-    }else {
+    }else if(message.includes("open whatsapp")){
+        speak("opening whatsapp..")
+        window.open("whatsapp://")
+    }
+    else if(message.includes("time")){
+      let time=new Date().toLocaleString(undefined,{hour:"numeric",minute:"numeric"})
+      speak(time)
+    }
+    else if(message.includes("date")){
+        let date=new Date().toLocaleString(undefined,{day:"numeric",month:"short"})
+        speak(date)
+      }
+    else {
         speak(`here's what i found related to ${message}`)
         window.open(`https://www.google.com/search?q=${message}` )
     }
